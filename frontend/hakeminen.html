@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <title>Oppio</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container-fluid p-4 my-10 text-white" id="alku">
+    <div class="row">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <div class="container-fluid">
+                    <a href="etusivu.html" class="navbar-brand"><img src="oppiologo.png" alt="logo" style="padding-right: 10px";></a> 
+                    <button class="navbar-toggler" type="button" data-bs-target="#navbarMenu" data-bs-toggle="collapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-3">
+                                <a href="etusivu.html" class="nav-link">Etusivu</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a href="mikäonoppio.html" class="nav-link">Mikä on Oppio?</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a href="amkvalintakoe.html" class="nav-link">AMK-valintakoe</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a href="hakeminen.html" class="nav-link">Hakeminen</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a href="otayhteyttä.html" class="nav-link">Ota yhteyttä!</a>
+                            </li>
+                            <li class="nav-item dropdown px-3">
+                                <a href="" class="nav-link dropdown-toggle mx-4" role="button" data-bs-toggle="dropdown"><img src="hakusymboli.png" width="16px" height="16px" alt="haku";></a>
+                                    <ul class="dropdown-menu">
+                                        <li><form>
+                                            <div class="mb-3 px-3">
+                                              <input type="email" class="form-control">
+                                            </div>
+                                            <button onclick="eiHakua()" type="submit" class="btn btn-primary mx-auto d-flex">Hae</button>
+                                          </form></li>
+                                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    </div>
+</div>
+
+<div class="container-fluid p-5 my-10 text-white">
+    <p class="text-center">Harjoittele vaadittavia taitoja</p>
+    <p class="h1 text-center">Moninkertaista mahdollisuutesi pärjätä AMK-valintakokeessa!</p><br>
+    <a href="kirjaudu.html" type="button" class="btn btn-secondary mx-auto d-block mt-5;" style="width: 6rem;">Kirjaudu</a> <br>
+    <a href="rekisteröidy.html" type="button" class="btn btn-secondary mx-auto d-block mt-5;" style="width: 8rem;">Rekisteröidy</a> <br>
+</div>
+
+<div class="text-center pt-5 pd-5">
+    <h2>Hakeminen</h2>
+</div>
+
+<div>
+    <img src="haku.jpg" alt="Haku" width="411px" class="mx-auto d-block m-2 pt-3">
+</div>
+
+<div class="text-center pt-2 pd-5">
+    <h6>Ammattikorkeakouluihin haetaan valintakokeilla.</h6>
+</div>
+
+
+<footer id="yhteystiedot" class="alaviite text-center text-lg-start text-white pt-5 mt-5">
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+       <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 d-md-none d-lg-block">
+            <a href="" class="navbar-brand"><img src="oppiologo.png" alt="logo";></a>
+        </div>
+          
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <p>
+                <a href="etusivu.html" class="text-reset">Etusivu</a>
+            </p>
+            <p>
+                <a href="mikäonoppio.html" class="text-reset">Mikä on Oppio?</a>
+            </p>
+            <p>
+                <a href="amkvalintakoe.html" class="text-reset">Valintakoe</a>
+            </p>
+            <p>
+                <a href="hakeminen.html" class="text-reset">Hakeminen</a>
+            </p>
+            <p>
+                <a href="otayhteyttä.html" class="text-reset">Ota yhteyttä</a>
+            </p>
+        </div>
+         
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                    Yhteystiedot
+                </h6>
+                
+                <p>
+                Oppio
+                </p>
+                <p>
+                info@oppio.fi
+                </p>
+                <p>
+                +358 50 405 5678
+                </p>
+            </div>
+         
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+                Tilaa Oppion uutiskirje
+                </h6>
+                <form>
+                    <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Sähköpostiosoitteesi" name="email">
+                        <button onclick="tilaaUutiskirje()" type="submit" class="btn btn-secondary mt-3">Tilaa</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </section>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function eiHakua() {
+      alert("Hakutoiminto tulossa!");
+    }
+</script>
+
+<script>
+    function tilaaUutiskirje() {
+      alert("Uutiskirje tilattu. (Ei oikeasti!)");
+    }
+</script>
+
+</body>
+</html>

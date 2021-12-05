@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <title>Oppio</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid p-4 my-10 text-white" id="alku">
+        <div class="row">
+                <nav class="navbar navbar-expand-md navbar-dark">
+                    <div class="container-fluid">
+                        <a href="kirjautuneen_näkymä.html" class="navbar-brand"><img src="oppiologo.png" alt="logo" style="padding-right: 10px";></a> 
+                        <button class="navbar-toggler" type="button" data-bs-target="#navbarMenu" data-bs-toggle="collapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                            <ul class="navbar-nav">
+                                <li class="nav-item px-3">
+                                    <a href="kirjautuneen_näkymä.html" class="nav-link">Etusivu</a>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <a href="mikäonoppio.html" class="nav-link">Mikä on Oppio?</a>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <a href="amkvalintakoe.html" class="nav-link">AMK-valintakoe</a>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <a href="hakeminen.html" class="nav-link">Hakeminen</a>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <a href="otayhteyttä.html" class="nav-link">Ota yhteyttä!</a>
+                                </li>
+                                <li class="nav-item dropdown px-3">
+                                    <a href="" class="nav-link dropdown-toggle mx-4" role="button" data-bs-toggle="dropdown"><img src="hakusymboli.png" width="16px" height="16px" alt="haku";></a>
+                                        <ul class="dropdown-menu">
+                                            <li><form>
+                                                <div class="mb-3 px-3">
+                                                  <input type="email" class="form-control">
+                                                </div>
+                                                <button onclick="eiHakua()" type="submit" class="btn btn-primary mx-auto d-flex">Hae</button>
+                                              </form></li>
+                                        </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        </div>
+    </div>
+
+
+
+<div class="text-center pt-5 pd-5">
+    <h2>Työpöytä</h2>
+</div>
+
+
+<div class= "container p-5">
+
+    <div class="card border-primary mt-5" style="max-width: 18rem;">
+        <div class="card-body">
+            <div>
+                <img src="jenna.png" id="käyttäjä" alt="userphoto" width="70px" height="70px">
+            </div>
+        <h2 style="text-align: center;color: #2A3990;padding-top: 10px;">Jenna Koskinen<img src="asetukset.png" alt="asetukset" width="30px" height="30px"></h2>
+        </div>
+    </div>
+
+    <div class="card border-primary mt-5" style="max-width: 30rem;">
+        <div class="card-header d-flex justify-content-between">
+            <div>
+                <p>
+                <script> document.write(new Date().toLocaleDateString()); </script>
+                </p>
+            </div>
+            <div>Valintakokeeseen on <p id="demo"></p></div>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Tämän päivän personoidut harjoitukset sisältävät tehtäviä seuraavista osioista:</p>
+            <ul>
+                <li class="puna">Matemaattiset taidot</li>
+                <li class="puna">Englannin kieli</li>
+            </ul>
+            <button type="submit" class="btn btn-secondary mt-3">Tee harjoitukset nyt</button>
+        </div>
+    </div>
+
+    <div class="card border-primary mt-5" style="max-width: 33rem;">
+        <div class="card-body">
+            <h2 style="text-align:center; color:#2A3990; padding-top:10px; padding-bottom: 10px;"><img src="mitali.png" alt="mitali" width="70px" height="55px">Suoritukset</h2>
+                <span><b style="color:black">Oppimisputki </b>13<b style= "color:black"> päivää</b></span><br>
+                <span><b style="color:black">Oppimismerkit </b>2<b style= "color:black"> /10</b></span>
+        </div>
+    </div>
+
+    <div class="card border-primary mt-5" style="width: 36rem;">
+        <div class="card-body">
+        <h5 class="card-title p-1"><img src="päät.png" alt="vaaka" width="30px" style="vertical-align:bottom;margin:0px 10px">Päätöksentekotaidot<img src="prog1.png" id="palkki" alt="progress" width="200px" style="margin:5px 15px"></h5>
+        <h5 class="card-title p-1"><img src="mat.png" alt="matikka" width="30px" style="vertical-align:middle;margin:0px 10px">Looginen päättely<img src="prog2.png" id="palkki" alt="progress" width="200px" style="margin:5px 15px"></h5>
+        <h5 class="card-title p-1"><img src="suomi.png" alt="suomi" width="30px" style="vertical-align:bottom;margin:0px 10px">Suomen kieli<img src="prog1.png" id="palkki" alt="progress" width="200px" style="margin:5px 15px"></h5>
+        <h5 class="card-title p-1"><img src="engl.png" alt="englanti" width="30px" style="vertical-align:middle;margin:0px 10px">Englannin kieli<img src="prog2.png" id="palkki" alt="progress" width="200px" style="margin:5px 15px"></h5>
+        </div>
+    </div>
+
+    <div class="card border-primary mt-5" style="width: 30rem;">
+        <div class="card-body">
+            <h2 style="text-align:center; color:#2A3990; padding-top:10px; padding-bottom: 20px;"><img src="koulutusalat.png" alt="koulutusalat" width="70px" height="65px"style="vertical-align:bottom;margin:0px 10px">  Valitut koulutusalat</h2>
+            <ul>
+                <li class="puna" style="font-size: 1.5em;">Journalismi</li>
+                <li class="puna" style="font-size: 1.5em;">Liiketalous</li>
+                </ul>
+            <h5 style="padding-top: 20px; padding-bottom: 20px;">Hakuaika päättyy 1.4.2021</h5>
+            <a href="http://www.opintopolku.fi"><img src="opintopolku.jpg" id="käyttäjä" class=img-fluid alt="Opintopolku-logo" width="200px"></a>
+        </div>
+    </div>
+
+    <div class="card border-primary mt-5" style="max-width: 40rem;">
+        <div class="card-body d-flex justify-content-between">
+                <div><button type="submit" class="btn btn-secondary">Tee harjoituskoe nyt</button></div>
+                <div><h5 class="card-title px-3">Edellisen suorituskerran pisteet:</h5></div>
+        </div>
+        <div class="card-body">
+            <p class= "card-text">Voit tehdä täyspitkän harjoituskokeen niin monta kertaa kuin haluat.</p>
+        </div>
+    </div>
+
+</div>
+
+
+<footer id="yhteystiedot" class="alaviite text-center text-lg-start text-white pt-5 mt-5">
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+       <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 d-md-none d-lg-block">
+            <a href="" class="navbar-brand"><img src="oppiologo.png" alt="logo";></a>
+        </div>
+          
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <p>
+                <a href="etusivu.html" class="text-reset">Etusivu</a>
+            </p>
+            <p>
+                <a href="mikäonoppio.html" class="text-reset">Mikä on Oppio?</a>
+            </p>
+            <p>
+                <a href="amkvalintakoe.html" class="text-reset">Valintakoe</a>
+            </p>
+            <p>
+                <a href="hakeminen.html" class="text-reset">Hakeminen</a>
+            </p>
+            <p>
+                <a href="otayhteyttä.html" class="text-reset">Ota yhteyttä</a>
+            </p>
+        </div>
+         
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                    Yhteystiedot
+                </h6>
+                
+                <p>
+                Oppio
+                </p>
+                <p>
+                info@oppio.fi
+                </p>
+                <p>
+                +358 50 405 5678
+                </p>
+            </div>
+         
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+                Tilaa Oppion uutiskirje
+                </h6>
+                <form>
+                    <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Sähköpostiosoitteesi" name="email">
+                        <button onclick="tilaaUutiskirje()" type="submit" class="btn btn-secondary mt-3">Tilaa</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </section>
+</footer>
+
+<!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 31, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + " päivää";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Oho se meni jo!";
+  }
+}, 1000);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function eiHakua() {
+      alert("Hakutoiminto tulossa!");
+    }
+</script>
+
+<script>
+    function tilaaUutiskirje() {
+      alert("Uutiskirje tilattu. (Ei oikeasti!)");
+    }
+</script>
+
+</body>
+</html>
