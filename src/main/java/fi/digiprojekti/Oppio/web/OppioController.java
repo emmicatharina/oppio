@@ -24,12 +24,4 @@ public class OppioController {
 		return "login";
 	}
 	
-	//Login form with error
-	@GetMapping("/login-error")
-	public String loginError(Model model) {
-		model.addAttribute("loginError", true);
-		return "login";
-	}
-	
-
 }
