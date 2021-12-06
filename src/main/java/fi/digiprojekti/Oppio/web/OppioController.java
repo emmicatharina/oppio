@@ -24,4 +24,12 @@ public class OppioController {
 		return "login";
 	}
 	
+	// Signup form
+	@GetMapping("/signup")
+	public String signup() {
+		return "signup";
+	}
+
+
+
 }

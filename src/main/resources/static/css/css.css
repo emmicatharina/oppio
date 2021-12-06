@@ -1,53 +1,59 @@
 .container-fluid{
-    background-color: #2A3990;
+  background-color: #2A3990;
 }
 
 .navbar{
-    background-color: #2A3990;
+  background-color: #2A3990;
 }
 
 .alaviite{
-    background-color: #2A3990;
+  background-color: #2A3990;
 }
 
 body {
-    background-color: #E5E9F2;
-    font-family: 'Inter', sans-serif;
+  background-color: #E5E9F2;
+  font-family: 'Inter', sans-serif;
 }
 
 .btn {
-    background-color: #D23369;
-    transition-duration: 0.4s;
-  }
-  
+  background-color: #D23369;
+  transition-duration: 0.4s;
+}
+
 .btn:hover {
-    background-color: #743369;
-    color: white;
-  }
+  background-color: #743369;
+  color: white;
+}
 
 ul {
-    list-style: none; /* Remove default bullets */
-  }
-  
+  list-style: none; /* Remove default bullets */
+}
+
 ul li.puna::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: #D23369; /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
-  }
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #D23369; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
 
 #palkki {
-	float: right;
-    margin-right: 20px;
-    }
+float: right;
+  margin-right: 20px;
+  }
 
 #käyttäjä {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
 
 span { font-size: 2em; color: #D23369}
- span b { font-size: 60%;}
+span b { font-size: 60%;}
+
+.card {display:inline-block;
+
+justify-content: center;
+vertical-align: top;
+}
