@@ -14,14 +14,13 @@
 </head>
 
 <body>
-    <h1>Työpöytä</h1>
-    <form th:action="@{/logout}" method="post">
-        <input type="submit" value="Sign Out" class="btn btn-sm btn-danger" />
-    </form>
-
     
-
-<div class="container-fluid p-4 my-10 text-white" id="alku">
+    
+    
+    <div class="container-fluid p-4 my-10 text-white" id="alku">
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out" class="btn btn-secondary btn-sm " />
+    </form>
     <div class="row">
         <div class= "col-sm-2">
             <a href="" class="navbar-brand"><img th:src="@{/images/oppiologo.png}" alt="logo"></a>
