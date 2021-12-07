@@ -17,16 +17,11 @@
 <body>
     <div class="container-fluid p-4 my-10 text-white" id="alku">
         <div class="row">
-            <div th:insert="navbar.html :: navbar"></div>
+            <div th:insert="header.html :: navbar"></div>
         </div>
     </div>
-    
-    <div class="container-fluid p-5 my-10 text-white">
-        <p class="text-center">Harjoittele vaadittavia taitoja</p>
-        <p class="h1 text-center">Moninkertaista mahdollisuutesi pärjätä AMK-valintakokeessa!</p><br>
-        <a href="kirjaudu.html" type="button" class="btn btn-secondary mx-auto d-block mt-5;" style="width: 6rem;">Kirjaudu</a> <br>
-        <a href="rekisteröidy.html" type="button" class="btn btn-secondary mx-auto d-block mt-5;" style="width: 8rem;">Rekisteröidy</a> <br>
-    </div>
+
+    <div th:insert="header.html :: banner"></div>
     
     <div class="text-center pt-5 pd-5">
         <h2>Mikä on Oppio?</h2>
@@ -41,8 +36,7 @@
         <h6>Oppion taustalla toimii tekoäly, jolle on opetettu kaikki ne asiat, joita AMK-valintakokeessa vaaditaan.</h6>
     </div>
     
-    
-
+    <div th:insert="footer.html :: footer"></div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     
