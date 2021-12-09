@@ -14,34 +14,43 @@
 </head>
 
 <body>
-    <div class="row d-flex justify-content-center">
-        <div class="card text-center m-5" style="width: 23rem;">
-            <div class="card-body">
-                <h2 class="card-title fw-bold" style="color:#2A3990; padding-top:10px; padding-bottom: 10px;">Kirjaudu
-                    sisään</h2>
-                <p class="card-text">Jatka syöttämällä käyttäjätunnuksesi ja salasanasi.</p>
-                <div class="col mt-2">
-                    <input type="text" class="form-control" placeholder="Sähköposti" name="email">
-                </div>
-                <div class="col mt-2">
-                    <input type="text" class="form-control" placeholder="Salasana" name="password">
-                    <a href="kirjautuneen_näkymä.html" type="submit" class="btn btn-secondary mt-3">Rekisteröidy</a> <br>
-                    <button type="submit" class="btn btn-secondary mt-3">Oletko jo rekisteröitynyt? Kirjaudu sisään täällä!</button>
-                    <br><br>
-                </div>
-            </div>
+    <div class="container-fluid p-4 my-10 text-white" id="alku">
+        <div class="row">
+            <div th:insert="header.html :: navbar"></div>
         </div>
     </div>
 
-    <h1>Login page</h1>
-    <p th:if="${param.error}" class="error">Wrong user name or password</p>
-    <form th:action="@{login}" method="post">
-        <label for="username">User name</label>:
-        <input type="text" id="username" name="username" autofocus="autofocus" /> <br />
-        <label for="password">Password</label>:
-        <input type="password" id="password" name="password" /> <br />
-        <input type="submit" value="Log in" />
-    </form>
+    <div class="row d-flex justify-content-center">
+        <div class="card text-center m-5" style="width: 23rem;">
+            <div class="card-body">
+                <h2 class="card-title fw-bold" style="color:#2A3990; padding-top:10px; padding-bottom: 10px;">Rekisteröidy</h2>
+                <p class="card-text">Luo uusi tunnus.</p>
+                <form th:object=${registrationInformation} th:action="@{/saveuser}" action="#" method="post">
+                    <div class="col mt-2">
+                        <input type="text" th:field="*{username}" class="form-control" placeholder="Sähköposti" name="username">
+                        <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="alert alert-danger">Username Error</p>
+                    </div>
+                    <div class="col mt-2">
+                        <input type="password" th:field="*{password}" class="form-control" placeholder="Salasana" name="password">
+                        <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="alert alert-danger">Password Error</p>
+                    </div>
+                    <div class="col mt-2">
+                        <input type="password" th:field="*{passwordCheck}" class="form-control" placeholder="Salasana uudestaan" name="password">
+                        <p th:if="${#fields.hasErrors('passwordCheck')}" th:errors="*{passwordCheck}" class="alert alert-danger">Password Match Error</p>
+                        <input type="submit" class="btn btn-secondary mt-3" value="Rekisteröidy" />
+                    </div>
+                    
+                    <br>
+
+                </form>
+                <button type="submit" class="btn btn-secondary mt-3">Oletko jo rekisteröitynyt? <br>Kirjaudu sisään
+                    täällä!</button>
+                <br><br>
+            </div>
+        </div>
+    </div>
+    
+    <div th:insert="footer.html :: footer"></div>
 </body>
 
 </html>

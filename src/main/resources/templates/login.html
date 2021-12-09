@@ -26,6 +26,7 @@
                 <h2 class="card-title fw-bold" style="color:#2A3990; padding-top:10px; padding-bottom: 10px;">Kirjaudu
                     sisään</h2>
                 <p class="card-text">Jatka syöttämällä käyttäjätunnuksesi ja salasanasi.</p>
+                <p th:if="${param.error}" class="error">Wrong user name or password</p>
                 <form th:action="@{login}" method="post">
                     <div class="col mt-2">
                         <input type="text" id="username" class="form-control" placeholder="Sähköposti" name="username">

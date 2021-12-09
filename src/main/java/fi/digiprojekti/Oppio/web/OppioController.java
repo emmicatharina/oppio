@@ -18,18 +18,6 @@ public class OppioController {
 		return "desktop";
 	}
 
-	// Login form
-	@GetMapping("/login")
-	public String login() {
-		return "login";
-	}
-
-	// Signup form
-	@GetMapping("/signup")
-	public String signup() {
-		return "signup";
-	}
-
 	// Oppio-tietoa
 	@GetMapping("/oppio")
 	public String oppio() {
