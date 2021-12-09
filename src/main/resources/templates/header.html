@@ -68,12 +68,12 @@
       </div>
   </nav>
 
-  <div class="container-fluid p-5 my-10 text-white" th:fragment="banner">
+  <div class="container-fluid p-5 my-10 text-white" th:fragment="banner" sec:authorize="isAnonymous()">
     <p class="text-center">Harjoittele vaadittavia taitoja</p>
     <p class="h1 text-center">Moninkertaista mahdollisuutesi pärjätä AMK-valintakokeessa!</p>
-    <a th:href="@{/login}" type="button" class="btn btn-secondary mx-auto d-block mt-5;"
+    <a th:href="@{/login}" class="btn btn-secondary mx-auto d-block mt-5;"
       style="width: 6rem;">Kirjaudu</a> <br>
-    <a th:href="@{/signup}" type="button" class="btn btn-secondary mx-auto d-block mt-5;"
+    <a th:href="@{/signup}" class="btn btn-secondary mx-auto d-block mt-5;"
       style="width: 8rem;">Rekisteröidy</a> <br>
   </div>
 
