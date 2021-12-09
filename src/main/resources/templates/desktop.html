@@ -33,6 +33,7 @@
                 </div>
                 <h2 style="text-align: center;color: #2A3990;padding-top: 10px;">Jenna Koskinen<img
                         th:src="@{/images/asetukset.png}" alt="asetukset" width="30px" height="30px"></h2>
+                <span th:text="${#authentication.getPrincipal().getUsername()}"></span>
                 <form th:action="@{/logout}" method="post">
                     <input type="submit" value="Kirjaudu ulos" class="btn btn-secondary mx-auto d-flex" />
                 </form>
