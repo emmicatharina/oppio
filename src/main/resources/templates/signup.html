@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fi" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Signup</title>
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/images/favicon.png}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="txt/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid p-4 my-10 text-white" id="alku">
+        <div class="row">
+            <div th:insert="header.html :: navbar"></div>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="card text-center m-5" style="width: 23rem;">
+            <div class="card-body">
+                <h2 class="card-title fw-bold" style="color:#2A3990; padding-top:10px; padding-bottom: 10px;">Rekisteröidy</h2>
+                <p class="card-text">Luo uusi tunnus.</p>
+                <form th:object=${registrationInformation} th:action="@{/saveuser}" action="#" method="post">
+                    <div class="col mt-2">
+                        <input type="text" th:field="*{username}" class="form-control" placeholder="Sähköposti" name="username">
+                        <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="alert alert-danger">Username Error</p>
+                    </div>
+                    <div class="col mt-2">
+                        <input type="password" th:field="*{password}" class="form-control" placeholder="Salasana" name="password">
+                        <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="alert alert-danger">Password Error</p>
+                    </div>
+                    <div class="col mt-2">
+                        <input type="password" th:field="*{passwordCheck}" class="form-control" placeholder="Salasana uudestaan" name="password">
+                        <p th:if="${#fields.hasErrors('passwordCheck')}" th:errors="*{passwordCheck}" class="alert alert-danger">Password Match Error</p>
+                        <input type="submit" class="btn btn-secondary mt-3" value="Rekisteröidy" />
+                    </div>
+                    
+                    <br>
+
+                </form>
+                <button type="submit" class="btn btn-secondary mt-3">Oletko jo rekisteröitynyt? <br>Kirjaudu sisään
+                    täällä!</button>
+                <br><br>
+            </div>
+        </div>
+    </div>
+    
+    <div th:insert="footer.html :: footer"></div>
+</body>
+
+</html>

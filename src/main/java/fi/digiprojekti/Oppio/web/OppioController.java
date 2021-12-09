@@ -11,25 +11,35 @@ public class OppioController {
 	public String index() {
 		return "index";
 	}
-	
+
 	// Desktop view for logged in user
 	@GetMapping("/desktop")
 	public String desktop() {
 		return "desktop";
 	}
-	
-	// Login form
-	@GetMapping("/login")
-	public String login() {
-		return "login";
+
+	// Oppio-tietoa
+	@GetMapping("/oppio")
+	public String oppio() {
+		return "oppio";
 	}
-	
-	//Login form with error
-	@GetMapping("/login-error")
-	public String loginError(Model model) {
-		model.addAttribute("loginError", true);
-		return "login";
+
+	// AMK-valintakoe
+	@GetMapping("/amk-valintakoe")
+	public String amkValintaKoe() {
+		return "amkvalintakoe";
 	}
-	
+
+	// Hakeminen
+	@GetMapping("/hakeminen")
+	public String hakeminen() {
+		return "hakeminen";
+	}
+
+	// Contact informations
+	@GetMapping("/otayhteytta")
+	public String contactInformation() {
+		return "contact";
+	}
 
 }
