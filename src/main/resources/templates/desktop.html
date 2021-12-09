@@ -15,9 +15,6 @@
 
 <body>
     <div class="container-fluid p-4 my-10 text-white" id="alku">
-        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out" class="btn btn-secondary btn-sm " />
-        </form>
         <div class="row">
             <div th:insert="header.html :: navbar"></div>
         </div>
@@ -28,7 +25,22 @@
     </div>
 
     <div class="container p-5">
+
         <div class="card border-primary mt-5" style="max-width: 18rem;">
+            <div class="card-body">
+                <div>
+                    <img th:src="@{/images/jenna.png}" id="käyttäjä" alt="userphoto" width="70px" height="70px">
+                </div>
+                <h2 style="text-align: center;color: #2A3990;padding-top: 10px;">Jenna Koskinen<img
+                        th:src="@{/images/asetukset.png}" alt="asetukset" width="30px" height="30px"></h2>
+                <span th:text="${#authentication.getPrincipal().getUsername()}"></span>
+                <form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Kirjaudu ulos" class="btn btn-secondary mx-auto d-flex" />
+                </form>
+            </div>
+        </div>
+
+        <div class="card border-primary mt-5" style="max-width: 30rem;">
             <div class="card-header d-flex justify-content-between">
                 <div>
                     <p>
@@ -50,6 +62,15 @@
 
         <div class="card border-primary mt-5" style="max-width: 33rem;">
             <div class="card-body">
+                <h2 style="text-align:center; color:#2A3990; padding-top:10px; padding-bottom: 10px;"><img
+                        th:src="@{/images/mitali.png}" alt="mitali" width="70px" height="55px">Suoritukset</h2>
+                <span><b style="color:black">Oppimisputki </b>13<b style="color:black"> päivää</b></span><br>
+                <span><b style="color:black">Oppimismerkit </b>2<b style="color:black"> /10</b></span>
+            </div>
+        </div>
+
+        <div class="card border-primary mt-5" style="width: 36rem;">
+            <div class="card-body">
                 <h5 class="card-title p-1"><img th:src="@{/images/päät.png}" alt="vaaka" width="30px"
                         style="vertical-align:bottom;margin:0px 10px">Päätöksentekotaidot<img
                         th:src="@{/images/prog1.png}" id="palkki" alt="progress" width="200px" style="margin:5px 15px">
@@ -67,26 +88,7 @@
             </div>
         </div>
 
-        <div class="card border-primary mt-5" style="max-width: 18rem;">
-            <div class="card-body">
-                <div>
-                    <img th:src="@{/images/jenna.png}" id="käyttäjä" alt="userphoto" width="70px" height="70px">
-                </div>
-                <h2 style="text-align: center;color: #2A3990;padding-top: 10px;">Jenna Koskinen<img
-                        th:src="@{/images/asetukset.png}" alt="asetukset" width="30px" height="30px"></h2>
-            </div>
-        </div>
-
-        <div class="card border-primary mt-5" style="max-width: 33rem;">
-            <div class="card-body">
-                <h2 style="text-align:center; color:#2A3990; padding-top:10px; padding-bottom: 10px;"><img
-                        th:src="@{/images/mitali.png}" alt="mitali" width="70px" height="55px">Suoritukset</h2>
-                <span><b style="color:black">Oppimisputki </b>13<b style="color:black"> päivää</b></span><br>
-                <span><b style="color:black">Oppimismerkit </b>2<b style="color:black"> /10</b></span>
-            </div>
-        </div>
-
-        <div class="card border-primary mt-5" style="max-width: 33rem;">
+        <div class="card border-primary mt-5" style="width: 33rem;">
             <div class="card-body">
                 <h2 style="text-align:center; color:#2A3990; padding-top:10px; padding-bottom: 20px;"><img
                         th:src="@{/images/koulutusalat.png}" alt="koulutusalat" width="70px" height="65px"
@@ -105,7 +107,7 @@
             <div class="card-body d-flex justify-content-between">
                 <div><button type="submit" class="btn btn-secondary">Tee harjoituskoe nyt</button></div>
                 <div>
-                    <h5 class="card-title">Edellisen suorituskerran pisteet:</h5>
+                    <h5 class="card-title px-3">Edellisen suorituskerran pisteet:</h5>
                 </div>
             </div>
             <div class="card-body">
