@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="fi" xmlns:th="http://www.thymeleaf.org">
+<html lang="fi" 
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
 <head>
   <title>Oppio - Etusivu</title>
@@ -38,7 +40,7 @@
           <li class="nav-item px-3">
             <a th:href="@{/otayhteytta}" class="nav-link">Ota yhteyttä!</a>
           </li>
-          <li class="nav-item dropdown px-3">
+          <li class="nav-item dropdown px-1">
             <a href="" class="nav-link dropdown-toggle mx-4" role="button" data-bs-toggle="dropdown"><img
                 th:src="@{/images/hakusymboli.png}" width="16px" height="16px" alt="haku"></a>
             <ul class="dropdown-menu">
@@ -52,11 +54,21 @@
               </li>
             </ul>
           </li>
+          <li sec:authorize="isAuthenticated()" class="nav-item dropdown">
+            <a href="" class="nav-link dropdown-toggle mx-4" role="button" data-bs-toggle="dropdown">Jenna Koskinen</a>
+            <ul class="dropdown-menu">
+              <li>
+                <form th:action="@{/logout}" method="post">
+                  <input type="submit" value="Kirjaudu ulos" class="btn btn-secondary mx-auto d-flex" />
+                </form>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
   </nav>
 
-  <div  class="container-fluid p-5 my-10 text-white" th:fragment="banner">
+  <div class="container-fluid p-5 my-10 text-white" th:fragment="banner">
     <p class="text-center">Harjoittele vaadittavia taitoja</p>
     <p class="h1 text-center">Moninkertaista mahdollisuutesi pärjätä AMK-valintakokeessa!</p>
     <a th:href="@{/login}" type="button" class="btn btn-secondary mx-auto d-block mt-5;"
