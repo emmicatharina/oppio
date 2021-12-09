@@ -42,4 +42,10 @@ public class OppioController {
 		return "contact";
 	}
 
+	// Practise quiz
+	@GetMapping("/harjoittele")
+	public String harjoittele() {
+		return "harjoittele";
+	}
+
 }
