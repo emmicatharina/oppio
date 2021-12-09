@@ -71,77 +71,7 @@
 </div>
 
 
-<div class= "container p-5">
 
-    <div class="card border-primary mt-5" style="max-width: 18rem;">
-        <div class="card-body">
-            <div>
-                <img src="jenna.png" id="käyttäjä" alt="userphoto" width="70px" height="70px">
-            </div>
-        <h2 style="text-align: center;color: #2A3990;padding-top: 10px;">Jenna Koskinen<img src="asetukset.png" alt="asetukset" width="30px" height="30px"></h2>
-        <button onclick="location.href='etusivu.html'" type="submit" class="btn btn-secondary mx-auto d-flex">Kirjaudu ulos</button>
-        </div>
-    </div>
-
-    <div class="card border-primary mt-5" style="max-width: 30rem;">
-        <div class="card-header d-flex justify-content-between">
-            <div>
-                <p>
-                <script> document.write(new Date().toLocaleDateString()); </script>
-                </p>
-            </div>
-            <div>Valintakokeeseen on <p id="demo"></p></div>
-        </div>
-        <div class="card-body">
-            <p class="card-text">Tämän päivän personoidut harjoitukset sisältävät tehtäviä seuraavista osioista:</p>
-            <ul>
-                <li class="puna">Matemaattiset taidot</li>
-                <li class="puna">Englannin kieli</li>
-            </ul>
-            <button type="submit" class="btn btn-secondary mt-3">Tee harjoitukset nyt</button>
-        </div>
-    </div>
-
-    <div class="card border-primary mt-5" style="max-width: 33rem;">
-        <div class="card-body">
-            <h2 style="text-align:center; color:#2A3990; padding-top:10px; padding-bottom: 10px;"><img src="mitali.png" alt="mitali" width="70px" height="55px">Suoritukset</h2>
-                <span><b style="color:black">Oppimisputki </b>13<b style= "color:black"> päivää</b></span><br>
-                <span><b style="color:black">Oppimismerkit </b>2<b style= "color:black"> /10</b></span>
-        </div>
-    </div>
-
-    <div class="card border-primary mt-5" style="width: 36rem;">
-        <div class="card-body">
-        <h5 class="card-title p-1"><img src="päät.png" alt="vaaka" width="30px" style="vertical-align:bottom;margin:0px 10px">Päätöksentekotaidot<img src="prog1.png" id="palkki" alt="progress" width="200px" style="margin:5px 15px"></h5>
-        <h5 class="card-title p-1"><img src="mat.png" alt="matikka" width="30px" style="vertical-align:middle;margin:0px 10px">Looginen päättely<img src="prog2.png" id="palkki" alt="progress" width="200px" style="margin:5px 15px"></h5>
-        <h5 class="card-title p-1"><img src="suomi.png" alt="suomi" width="30px" style="vertical-align:bottom;margin:0px 10px">Suomen kieli<img src="prog1.png" id="palkki" alt="progress" width="200px" style="margin:5px 15px"></h5>
-        <h5 class="card-title p-1"><img src="engl.png" alt="englanti" width="30px" style="vertical-align:middle;margin:0px 10px">Englannin kieli<img src="prog2.png" id="palkki" alt="progress" width="200px" style="margin:5px 15px"></h5>
-        </div>
-    </div>
-
-    <div class="card border-primary mt-5" style="width: 30rem;">
-        <div class="card-body">
-            <h2 style="text-align:center; color:#2A3990; padding-top:10px; padding-bottom: 20px;"><img src="koulutusalat.png" alt="koulutusalat" width="70px" height="65px"style="vertical-align:bottom;margin:0px 10px">  Valitut koulutusalat</h2>
-            <ul>
-                <li class="puna" style="font-size: 1.5em;">Journalismi</li>
-                <li class="puna" style="font-size: 1.5em;">Liiketalous</li>
-                </ul>
-            <h5 style="padding-top: 20px; padding-bottom: 20px;">Hakuaika päättyy 1.4.2021</h5>
-            <a href="http://www.opintopolku.fi"><img src="opintopolku.jpg" id="käyttäjä" class=img-fluid alt="Opintopolku-logo" width="200px"></a>
-        </div>
-    </div>
-
-    <div class="card border-primary mt-5" style="max-width: 40rem;">
-        <div class="card-body d-flex justify-content-between">
-                <div><button type="submit" class="btn btn-secondary">Tee harjoituskoe nyt</button></div>
-                <div><h5 class="card-title px-3">Edellisen suorituskerran pisteet:</h5></div>
-        </div>
-        <div class="card-body">
-            <p class= "card-text">Voit tehdä täyspitkän harjoituskokeen niin monta kertaa kuin haluat.</p>
-        </div>
-    </div>
-
-</div>
 
 
 <footer id="yhteystiedot" class="alaviite text-center text-lg-start text-white pt-5 mt-5">
@@ -203,39 +133,6 @@
       </div>
     </section>
 </footer>
-
-<!-- Display the countdown timer in an element -->
-<p id="demo"></p>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("May 31, 2022 15:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + " päivää";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Oho se meni jo!";
-  }
-}, 1000);
-</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 
