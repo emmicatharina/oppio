@@ -1,20 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
   
-html, body{
+html, body {
     height: 100%;
 }
 
-
-body{
-    font-family: 'Inter', sans-serif;
-    
-}
-
-main{
+main {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -22,13 +16,12 @@ main{
     justify-content: center;
     align-items: center;
     background-color: #2A3990;
-    background-color : #2A3990;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.game-quiz-container{
+.game-quiz-container {
     width: 40rem;
     height: 30rem;
     background-color: #E5E9F2;
@@ -37,9 +30,10 @@ main{
     align-items: center;
     justify-content: space-around;
     border-radius: 30px;
+    margin: 10px;
 }
 
-.game-details-container{
+.game-details-container {
     width: 80%;
     height: 4rem;
     display: flex;
@@ -47,11 +41,11 @@ main{
     align-items: center;
 }
 
-.game-details-container h1{
+.game-details-container h1 {
     font-size: 1.2rem;
 }
 
-.game-question-container{
+.game-question-container {
     width: 80%;
     height: 8rem;
     display: flex;
@@ -61,13 +55,13 @@ main{
     border-radius: 25px;
 }
 
-.game-question-container h1{
+.game-question-container h1 {
     font-size: 1.1rem;
     text-align: center;
     padding: 3px;
 }
 
-.game-options-container{
+.game-options-container  {
     width: 90%;
     height: 12rem;
     display: flex;
@@ -76,14 +70,17 @@ main{
     justify-content: space-around;
 }
 
-.game-options-container span{
+.game-options-container span {
     width: 47%;
     height: 5rem;
     border: 2px solid darkgray;
     border-radius: 20px;
     overflow: hidden;
+    font-size: 1.1rem;
+    line-height: 1;
 }
-span label{
+
+span label {
     width: 100%;
     height: 100%;
     display: flex;
@@ -95,7 +92,7 @@ span label{
     color: rgb(22, 22, 22);
 }
 
-span label:hover{
+span label:hover {
     -ms-transform: scale(1.12);
     -webkit-transform: scale(1.12);
     transform: scale(1.12);
@@ -112,13 +109,13 @@ input[type=radio]:checked ~ .option {
 	background: paleturquoise;
 }
 
-.next-button-container{
+.next-button-container {
     width: 50%;
     height: 3rem;
     display: flex;
     justify-content: center;
 }
-.next-button-container button{
+.next-button-container button {
     width: 8rem;
     height: 2rem;
     border-radius: 10px;
@@ -129,11 +126,11 @@ input[type=radio]:checked ~ .option {
     cursor: pointer;
     outline: none;
 }
-.next-button-container button:hover{
+.next-button-container button:hover {
     background-color: #D23369;
 }
 
-.modal-container{
+.modal-container {
     display: none;
     position: fixed;
     z-index: 1; 
@@ -151,7 +148,7 @@ input[type=radio]:checked ~ .option {
     animation: fadeIn 1.2s ease-in-out;
 }
 
-.modal-content-container{
+.modal-content-container {
     height: 20rem;
     width: 25rem;
     background-color: rgb(43, 42, 42);
@@ -162,14 +159,14 @@ input[type=radio]:checked ~ .option {
     border-radius: 25px;
 }
 
-.modal-content-container h1{
+.modal-content-container h1 {
     font-size: 1.3rem;
     height: 3rem;
     color: lightgray;
     text-align: center;
 }
 
-.grade-details{
+.grade-details {
     width: 15rem;
     height: 10rem;
     display: flex;
@@ -178,12 +175,12 @@ input[type=radio]:checked ~ .option {
     justify-content: space-around;
 }
 
-.grade-details p{
+.grade-details p {
     color: white;
     text-align: center;
 }
 
-.modal-button-container{
+.modal-button-container {
     height: 2rem;
     width: 100%;
     display: flex;
@@ -191,7 +188,7 @@ input[type=radio]:checked ~ .option {
     justify-content: center;
 }
 
-.modal-button-container button{
+.modal-button-container button {
     width: 10rem;
     height: 2rem;
     background: none;
@@ -202,68 +199,68 @@ input[type=radio]:checked ~ .option {
     cursor: pointer;
     border-radius: 20px;
 }
-.modal-button-container button:hover{
+.modal-button-container button:hover {
     background-color: rgb(83, 82, 82);
 }
 
-@media(min-width : 300px) and (max-width : 350px){
-    .game-quiz-container{
+@media(min-width : 300px) and (max-width : 350px) {
+    .game-quiz-container {
         width: 90%;
         height: 80vh;
      }
-     .game-details-container h1{
+     .game-details-container h1 {
         font-size: 0.8rem;
      }
  
-     .game-question-container{
+     .game-question-container {
         height: 6rem;
      }
-     .game-question-container h1{
+     .game-question-container h1 {
        font-size: 0.9rem;
     }
  
-    .game-options-container span{
+    .game-options-container span {
         width: 90%;
         height: 2.5rem;
     }
-    .game-options-container span label{
+    .game-options-container span label {
         font-size: 0.8rem;
     }
-    .modal-content-container{
+    .modal-content-container {
         width: 90%;
         height: 25rem;
     }
     
-    .modal-content-container h1{
+    .modal-content-container h1 {
         font-size: 1.2rem;
     }
 }
 
-@media(min-width : 350px) and (max-width : 700px){
-   .game-quiz-container{
+@media(min-width : 350px) and (max-width : 700px) {
+   .game-quiz-container {
        width: 90%;
        height: 80vh;
     }
-    .game-details-container h1{
+    .game-details-container h1 {
         font-size: 1rem;
     }
 
-    .game-question-container{
+    .game-question-container {
         height: 8rem;
     }
 
-    .game-question-container h1{
+    .game-question-container h1 {
         font-size: 0.9rem;
      }
 
-    .game-options-container span{
+    .game-options-container span {
         width: 90%;
     }
-    .modal-content-container{
+    .modal-content-container {
         width: 90%;
         height: 25rem;
     }
-    .modal-content-container h1{
+    .modal-content-container h1 {
         font-size: 1.2rem;
     }
 }

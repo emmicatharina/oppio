@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="css/css.css">
-    <link type="text/css" rel="stylesheet" href="css/harjoitustehtävä.css">
+    <link type="text/css" rel="stylesheet" href="css/harjoittele.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -22,10 +22,10 @@
     </div>
 
     <div class="text-center pt-5 pd-5">
-        <h2>Harjoitustehtävät</h2>
+        <h2>Harjoitustehtävät</h2><br>
     </div>
 
-    <main>
+    <main class="quiz">
         <!-- creating a modal for when quiz ends -->
         <div class="modal-container" id="score-modal">
           
@@ -38,7 +38,7 @@
                     <p>Vääriä vastauksia : <span id="wrong-answers"></span></p>
                     <p>Oikeita vastauksia : <span id="right-answers"></span></p>
                     <p>Arviointi : <span id="grade-percentage"></span>%</p>
-                    <p ><span id="remarks"></span></p>
+                    <p><span id="remarks"></span></p>
                 </div>
               
                 <div class="modal-button-container">
@@ -97,7 +97,6 @@
                     <label for="option-four" class="option" id="option-four-label"></label>
                 </span>
 
-
             </div>
 
             <div class="next-button-container">
@@ -106,11 +105,11 @@
 
         </div>
     </main>
-    <script src="js/harjoitustehtävä.js"></script>
     
-
     <div th:insert="footer.html :: footer"></div>
 
+    <script src="js/harjoittele.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>

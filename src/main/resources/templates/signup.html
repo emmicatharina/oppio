@@ -27,7 +27,7 @@
                 <p class="card-text">Luo uusi tunnus.</p>
                 <form th:object=${registrationInformation} th:action="@{/saveuser}" action="#" method="post">
                     <div class="col mt-2">
-                        <input type="text" th:field="*{username}" class="form-control" placeholder="Sähköposti" name="username">
+                        <input type="text" th:field="*{username}" class="form-control" placeholder="Käyttäjätunnus" name="username">
                         <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="alert alert-danger">Username Error</p>
                     </div>
                     <div class="col mt-2">

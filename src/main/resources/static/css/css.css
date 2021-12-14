@@ -1,12 +1,12 @@
-.container-fluid{
+.container-fluid {
   background-color: #2A3990;
 }
 
-.navbar{
+.navbar {
   background-color: #2A3990;
 }
 
-.alaviite{
+.alaviite {
   background-color: #2A3990;
 }
 
@@ -57,3 +57,5 @@ span b { font-size: 60%;}
 justify-content: center;
 vertical-align: top;
 }
+
+/* Quiz */

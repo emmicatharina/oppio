@@ -54,9 +54,12 @@
               </li>
             </ul>
           </li>
-          <li sec:authorize="isAuthenticated()" class="nav-item dropdown">
+          <li sec:authorize="isAuthenticated()" class="nav-item dropdown px-1">
             <a href="" class="nav-link dropdown-toggle mx-4" role="button" data-bs-toggle="dropdown" th:text="${#authentication.getPrincipal().getUsername()}"></a>
             <ul class="dropdown-menu">
+              <li>
+                <a th:href="@{/desktop}" class="btn btn-secondary mx-auto d-flex">Työpöytä</a>
+              </li>
               <li>
                 <form th:action="@{/logout}" method="post">
                   <input type="submit" value="Kirjaudu ulos" class="btn btn-secondary mx-auto d-flex" />
