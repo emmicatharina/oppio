@@ -149,7 +149,7 @@ input[type=radio]:checked ~ .option {
 }
 
 .modal-content-container {
-    height: 20rem;
+    height: 28rem;
     width: 25rem;
     background-color: rgb(43, 42, 42);
     display: flex;
@@ -159,7 +159,7 @@ input[type=radio]:checked ~ .option {
     border-radius: 25px;
 }
 
-.modal-content-container h1 {
+.modal-content-container h2 {
     font-size: 1.3rem;
     height: 3rem;
     color: lightgray;
@@ -178,6 +178,10 @@ input[type=radio]:checked ~ .option {
 .grade-details p {
     color: white;
     text-align: center;
+}
+
+#remarks {
+    font-size: 1.1rem;
 }
 
 .modal-button-container {
@@ -245,8 +249,12 @@ input[type=radio]:checked ~ .option {
         font-size: 1rem;
     }
 
+    .game-details-container {
+        height: 4rem;
+    }
+
     .game-question-container {
-        height: 8rem;
+        height: 5rem;
     }
 
     .game-question-container h1 {
@@ -255,12 +263,13 @@ input[type=radio]:checked ~ .option {
 
     .game-options-container span {
         width: 90%;
+        height: 8vh;
     }
     .modal-content-container {
-        width: 90%;
+        width: 75%;
         height: 25rem;
     }
-    .modal-content-container h1 {
+    .modal-content-container h2 {
         font-size: 1.2rem;
     }
 }
